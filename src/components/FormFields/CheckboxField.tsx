@@ -1,15 +1,21 @@
-import { FormFieldProps } from '../../types';
+import { FormFieldProps } from "@/types";
 
-export const CheckboxField = ({ field, value, error, onChange, onBlur }: FormFieldProps) => {
+export const CheckboxField = ({
+  field,
+  value,
+  error,
+  onChange,
+  onBlur,
+}: FormFieldProps) => {
   // Handle multiple checkboxes (array of values) or single checkbox (boolean)
   const isMultiple = field.options && field.options.length > 0;
-  
+
   if (isMultiple) {
     const selectedValues = Array.isArray(value) ? value : [];
-    
+
     const handleCheckboxChange = (optionValue: string) => {
       const newSelectedValues = [...selectedValues];
-      
+
       if (newSelectedValues.includes(optionValue)) {
         // Remove if already selected
         const index = newSelectedValues.indexOf(optionValue);
@@ -18,10 +24,10 @@ export const CheckboxField = ({ field, value, error, onChange, onBlur }: FormFie
         // Add if not selected
         newSelectedValues.push(optionValue);
       }
-      
+
       onChange(newSelectedValues);
     };
-    
+
     return (
       <div className="mb-4">
         <fieldset>
@@ -41,7 +47,9 @@ export const CheckboxField = ({ field, value, error, onChange, onBlur }: FormFie
                   onChange={() => handleCheckboxChange(option.value)}
                   onBlur={onBlur}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  data-testid={option.dataTestId || `${field.dataTestId}-${option.value}`}
+                  data-testid={
+                    option.dataTestId || `${field.dataTestId}-${option.value}`
+                  }
                 />
                 <label
                   htmlFor={`${field.fieldId}-${option.value}`}

@@ -1,4 +1,4 @@
-import { FormFieldProps } from '../types';
+import { FormFieldProps } from '@/types';
 import TextField from './FormFields/TextField';
 import EmailField from './FormFields/EmailField';
 import TelField from './FormFields/TelField';

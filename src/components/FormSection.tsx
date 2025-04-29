@@ -1,4 +1,4 @@
-import { FormSectionProps } from '../types';
+import { FormSectionProps } from '@/types';
 import FormField from './FormField';
 
 const FormSection = ({ section, values, errors, onChange, onBlur }: FormSectionProps) => {

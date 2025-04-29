@@ -1,4 +1,4 @@
-import { FormFieldProps } from '../../types';
+import { FormFieldProps } from '@/types';
 
 const TextareaField = ({ field, value, error, onChange, onBlur }: FormFieldProps) => {
   return (

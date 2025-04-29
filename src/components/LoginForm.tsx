@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createUser } from '../services/api';
-import { User } from '../types';
+import { User } from '@/types';
 
 const LoginForm = () => {
   const router = useRouter();

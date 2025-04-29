@@ -1,6 +1,12 @@
-import { FormFieldProps } from '../../types';
+import { FormFieldProps } from "@/types";
 
-const RadioField = ({ field, value, error, onChange, onBlur }: FormFieldProps) => {
+const RadioField = ({
+  field,
+  value,
+  error,
+  onChange,
+  onBlur,
+}: FormFieldProps) => {
   return (
     <div className="mb-4">
       <fieldset>
@@ -21,7 +27,9 @@ const RadioField = ({ field, value, error, onChange, onBlur }: FormFieldProps) =
                 onBlur={onBlur}
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                 required={field.required}
-                data-testid={option.dataTestId || `${field.dataTestId}-${option.value}`}
+                data-testid={
+                  option.dataTestId || `${field.dataTestId}-${option.value}`
+                }
               />
               <label
                 htmlFor={`${field.fieldId}-${option.value}`}

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import DynamicForm from '../../components/Dynamicform';
+import DynamicForm from '@/components/Dynamicform';
 
 export default function FormPage() {
   const router = useRouter();
