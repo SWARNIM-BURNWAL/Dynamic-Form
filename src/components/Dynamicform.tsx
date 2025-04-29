@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getForm } from '../services/api';
 import FormSection from './FormSection';
-import { FormResponse, FormSection as FormSectionType, FormValues, FieldErrors, FormField } from '../types';
+import { FormResponse, FormValues, FieldErrors, FormField } from '../types';
 
 const DynamicForm = () => {
   const router = useRouter();

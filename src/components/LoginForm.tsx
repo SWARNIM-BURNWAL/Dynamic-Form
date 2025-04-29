@@ -55,7 +55,7 @@ const LoginForm = () => {
     
     try {
       const result = await createUser(formData);
-      
+    
       if (result) {
         // Store user data in sessionStorage for use in form page
         sessionStorage.setItem('userData', JSON.stringify(formData));
@@ -65,7 +65,9 @@ const LoginForm = () => {
         setApiError(result);
       }
     } catch (error) {
-      setApiError('An unexpected error occurred. Please try again.');
+      console.error('Error during login:', error);
+      setApiError('An error occurred while logging in. Please try again.');
+    
     } finally {
       setIsLoading(false);
     }
